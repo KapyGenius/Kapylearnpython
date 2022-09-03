@@ -1,15 +1,37 @@
-a = 7
-b = 6
-c = 25
+listNote = [15, 17, 20, 12, 16, 13, 20]
+listNom = ["donald", "ange", "michael"]
+listNom2 = ["roger", "marius"]
+#print(listNote[:4])
+#if "donalda" in listNom:
+#  print("il ya donalda dans la liste")
 
-if a > b and c > 15:
-  print("a est supérieur à b et c>15")
-  #if c > 15:
-  #  print("en plus c est supérieur à 15")
-elif a == b:
-  print("a est égale à b")
-else:
-  print("a est inférieur à b")
+listNom[1:3] = ["angela", "Aichaela"]
 
-print("ce code va toujours s'exécuter")
-  
+listNom.insert(1, "fabiol")
+
+listNom.append("nahomie")
+
+listNom.extend(listNom2)
+
+#listNom.remove("donald")
+
+listNom.pop(1)
+
+listNom.insert(2, "dominique")
+
+#listNom.clear()
+
+listNom.sort()
+
+listNomTotal = listNom + listNom2
+
+print(listNomTotal.count("ange"))
+
+
+tupleNom = ("donald", "ange")
+
+tupleNom = list(tupleNom)
+tupleNom[0] = "donaldo"
+tupleNom = tuple(tupleNom)
+
+print(tupleNom[0])
