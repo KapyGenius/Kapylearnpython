@@ -1,37 +1,30 @@
-listNote = [15, 17, 20, 12, 16, 13, 20]
-listNom = ["donald", "ange", "michael"]
-listNom2 = ["roger", "marius"]
-#print(listNote[:4])
-#if "donalda" in listNom:
-#  print("il ya donalda dans la liste")
+person = {
+  "nom": "donald",
+  "prenom": "steve",
+  "age": 14,
+  "note": [12, 23, 14]
+}
 
-listNom[1:3] = ["angela", "Aichaela"]
+x = person.keys()
+#person.values()
+#person.items()
+print(x)
 
-listNom.insert(1, "fabiol")
+person["nom"] = "ange"
+#person.update({"nom":"ange"})
+person["sexe"] = "m"
+person.pop("note")
+#person.popitem()
 
-listNom.append("nahomie")
+#person.clear()
 
-listNom.extend(listNom2)
+person2 = person.copy()
+print(x)
 
-#listNom.remove("donald")
+print(person2)
 
-listNom.pop(1)
+mySets = {"donald", "ange", "fabiolle"}
 
-listNom.insert(2, "dominique")
+mySets.add("dominique")
 
-#listNom.clear()
-
-listNom.sort()
-
-listNomTotal = listNom + listNom2
-
-print(listNomTotal.count("ange"))
-
-
-tupleNom = ("donald", "ange")
-
-tupleNom = list(tupleNom)
-tupleNom[0] = "donaldo"
-tupleNom = tuple(tupleNom)
-
-print(tupleNom[0])
+print(mySets)
