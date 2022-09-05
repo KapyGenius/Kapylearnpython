@@ -1,30 +1,30 @@
-person = {
-  "nom": "donald",
-  "prenom": "steve",
-  "age": 14,
-  "note": [12, 23, 14]
-}
+i = 0
+while i < 6:
+  print(f"{i}) hello")
+  if i == 3:
+    break
+  i += 1 #i=i+1
 
-x = person.keys()
-#person.values()
-#person.items()
-print(x)
+fruits = ["orange", "ananas", "mangue"]
+dicPerson = {"nom":"donald", "prenom":"ange"}
 
-person["nom"] = "ange"
-#person.update({"nom":"ange"})
-person["sexe"] = "m"
-person.pop("note")
-#person.popitem()
+#fruits = tuple(fruits)
 
-#person.clear()
+for x in fruits:
+  if x == "ananas":
+    continue
+  for y in x:
+    print(y)
+  print("")
+  
 
-person2 = person.copy()
-print(x)
+for cle, valeur in dicPerson.items():
+  print(f"{cle} - {valeur}")
 
-print(person2)
+nom = "donald"
 
-mySets = {"donald", "ange", "fabiolle"}
+for letter in nom:
+  print(letter)
 
-mySets.add("dominique")
-
-print(mySets)
+for x in range(6):
+  print(f"{x}) hello")
