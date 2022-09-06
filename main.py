@@ -1,66 +1,35 @@
-print("hello")
+class Person:
+  def __init__(self, name, age, poids):
+    self.name = name
+    self.age = age
+    self.poids = poids
 
-def myFunction(age, nom, sexe = "m"):
-  print(f"hello {nom} from function {age} et ton sexe {sexe}")
+  def parler(self, texte):
+    print(f"je parle le texte: {texte}")
 
-def myFunc2(foods):
-  for x in foods:
-    print(x)
+  def presenter(self):
+    print(f"je m'appele {self.name}, j'ai {self.age} ans et je pese {self.poids} kilos")
 
-myFunction(nom = "donald", age = 16, sexe="f")
-myFunction(14, "ange", "f")
+  def monage(self):
+    return self.age
+  
 
-#myFunc2(["banane", "Ero", "Orange"])
+donald = Person("donald", 15, 60)
+ange = Person("ange", 14, 55)
 
-# f(n) = f(n-1) + n, f(0)=1
+donald.age = 20
 
-def f(n):
-  if n == 0:
-    return 1
-  else:
-    return f(n-1) + n
+#del donald.age
 
-resultat = f(3)
+#del donald
 
-print(resultat)
+print(donald.name)
+print(ange.name)
 
-carre = lambda x, y : x**y
+donald.parler("bonjour")
 
-print(carre(5, 3))
+donald.presenter()
+ange.presenter()
 
+print(donald.monage())
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#list comprehension
-myList = [1, 3, 4, 5, 6]
-
-#myListCarre = []
-#for x in myList:
-#  if x % 2 == 1:
-#    myListCarre.append(x**2)
-
-myListCarre = [ x**2 for x in myList if x % 2 == 1 ]
-
-#print(myListCarre)
